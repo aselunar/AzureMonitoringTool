@@ -9,8 +9,6 @@ const TENANT_ID = process.env.AZURE_TENANT_ID;
 const CLIENT_ID = process.env.AZURE_CLIENT_ID;
 const CLIENT_SECRET = process.env.AZURE_CLIENT_SECRET;
 
-console.log(TENANT_ID, CLIENT_ID, CLIENT_SECRET);
-
 tokenController.getToken = async (req, res, next) => {
   if (!TENANT_ID || !CLIENT_ID || !CLIENT_SECRET) {
     return next({
